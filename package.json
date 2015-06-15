@@ -1,0 +1,22 @@
+{
+  "name": "better-npm-run",
+  "description": "Better NPM scripts runner",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Benjamin Orozco <benoror@gmail.com>",
+  "contributors": [
+    "Benjamin Orozco <benoror@gmail.com>",
+    "Kent C. Dodds <kent@doddsfamily.us>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/benoror/better-npm-run.git"
+  },
+  "main": "index.js",
+  "bin": {
+    "better-npm-run": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
