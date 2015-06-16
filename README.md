@@ -1,3 +1,5 @@
+[![NPM](https://nodei.co/npm/better-npm-run.png)](https://npmjs.org/package/better-npm-run)
+
 # Intro
 
 Better NPM scripts runner
