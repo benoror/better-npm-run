@@ -25,4 +25,10 @@ if (!pkg.betterScripts[process.argv[2]]) {
 
 console.log('Executing script: ' + process.argv[2] + '\n');
 
-exec(pkg.betterScripts[process.argv[2]]);
+exec(pkg.betterScripts[process.argv[2]], function (error, stdout, stderr) {
+  process.stderr.write(stderr);
+  process.stdout.write(stdout);
+  if(error !== null) {
+    console.log('exec error: '+error);
+  }
+});
