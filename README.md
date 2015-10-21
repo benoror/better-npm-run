@@ -9,6 +9,14 @@ Better NPM scripts runner
     - https://github.com/formly-js/angular-formly/issues/305
         - https://github.com/npm/npm/issues/2800
 
+# Inspired by
+
+- https://www.npmjs.com/package/with-package
+
+# Alternatives
+
+- [argv-set-env](https://github.com/kentcdodds/argv-set-env)
+
 # Usage in package.json
 
 From this:
@@ -62,7 +70,3 @@ To this:
 
 }
 ```
-
-# Inspired by
-
-- https://www.npmjs.com/package/with-package
