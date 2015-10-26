@@ -18,5 +18,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "endofline": "0.0.3"
   }
 }
