@@ -17,7 +17,7 @@
     "better-npm-run": "index.js"
   },
   "scripts": {
-    "test": "node index.js test"
+    "test": "node index.js test --test"
   },
   "dependencies": {
     "endofline": "0.0.3"
