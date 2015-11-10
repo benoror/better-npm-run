@@ -73,7 +73,7 @@ To this:
 
 Also if you have .env file in your project root it will be loaded on every command
 
-// example .env file
-
-    NODE_PATH=./:./lib
-    PORT=5000
+```
+NODE_PATH=./:./lib
+PORT=5000
+```
