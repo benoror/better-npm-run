@@ -20,7 +20,8 @@
     "test": "node index.js test --test"
   },
   "dependencies": {
-    "endofline": "0.0.3"
+    "endofline": "0.0.3",
+    "object-assign": "^4.0.1"
   },
   "betterScripts": {
     "test": {
