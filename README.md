@@ -32,42 +32,41 @@ From this:
 To this:
 ```
 {
-	"devDependencies": {
-		"better-npm-run": "~0.0.1"
-	},
+  "devDependencies": {
+    "better-npm-run": "~0.0.1"
+  },
   "scripts": {
     "build:dist": "better-npm-run build:dist",
     "test": "better-npm-run test"
   },
   "betterScripts": {
     "build:dist": {
-        "command": "webpack --config $npm_package_webpack --progress --colors",
-        "env": {
-            "NODE_ENV": "development"
-        }
+      "command": "webpack --config $npm_package_webpack --progress --colors",
+      "env": {
+        "NODE_ENV": "development"
+      }
     },
     "build:prod": {
-        "command": "webpack --config $npm_package_webpack --progress --colors",
-        "env": {
-            "NODE_ENV": "production"
-        }
+      "command": "webpack --config $npm_package_webpack --progress --colors",
+      "env": {
+        "NODE_ENV": "production"
+      }
     },
     "build": [
-        {
-            "run": "build:dist"
-        },
-        {
-            "run": "build:prod"
-        }
+      {
+        "run": "build:dist"
+      },
+      {
+        "run": "build:prod"
+      }
     ],
     "test": {
-        "command": "karma start",
-        "env": {
-            "NODE_ENV": "test"
-        }
+      "command": "karma start",
+      "env": {
+        "NODE_ENV": "test"
+      }
     }
-  },
-
+  }
 }
 ```
 
