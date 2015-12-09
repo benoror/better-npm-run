@@ -111,11 +111,11 @@ Currently, using [bash variables](http://tldp.org/LDP/abs/html/internalvariables
 In order to use bash variables, you can save the script into a bash file (`.sh`) and run it there, like so:
 
 `forever.sh`:
-```
+``` bash
 forever start -l ${PWD}/logs/forever.log -o ${PWD}/logs/out.log -e ${PWD}/logs/errors.log -a index.js
 ```
 
 `package.json`:
-```
+``` javascript
 "command": "bash forever.sh"
 ```
