@@ -24,7 +24,7 @@ Better NPM scripts runner
 # Usage in package.json
 
 From this:
-```
+``` json
 {
   "scripts": {
     "build:dist": "NODE_ENV=development webpack --config $npm_package_webpack --progress --colors",
@@ -34,7 +34,7 @@ From this:
 ```
 
 To this:
-```
+``` json
 {
   "devDependencies": {
     "better-npm-run": "~0.0.1"
