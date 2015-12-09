@@ -70,9 +70,31 @@ To this:
 }
 ```
 
-Also if you have .env file in your project root it will be loaded on every command
+# .env File
+
+If you have an `.env` file in your project root it will be loaded on every command
 
 ```
 NODE_PATH=./:./lib
 PORT=5000
+```
+
+# Shell scripts
+
+Currently, using [bash variables](http://tldp.org/LDP/abs/html/internalvariables.html) (PWD, USER, etc.) is not possible: 
+
+``` JSON
+  "command": "forever start -l ${PWD}/logs/forever.log -o ${PWD}/logs/out.log -e ${PWD}/logs/errors.log -a index.js",
+```
+
+In order to use them, you can create an script file (`.sh`) instead:
+
+`forever.sh`:
+``` bash
+forever start -l ${PWD}/logs/forever.log -o ${PWD}/logs/out.log -e ${PWD}/logs/errors.log -a index.js
+```
+
+`package.json`:
+``` javascript
+  "command": "./forever.sh"
 ```
