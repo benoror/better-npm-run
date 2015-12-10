@@ -1,3 +1,4 @@
+var chalk = require('chalk');
 
 
 if (process.env.TEST_ENV !== "TEST_VALUE") {
@@ -11,3 +12,10 @@ if (process.env.FOO !== "bar") {
 if (process.argv[2] !== "--test") {
     throw new Error('it should accept params');
 }
+
+if(!chalk.supportsColor) {
+    console.log('No colors supported');
+}
+
+
+console.log('All '+chalk.green('tests')+' passed');
