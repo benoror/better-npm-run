@@ -52,14 +52,6 @@ To this:
         "NODE_ENV": "production"
       }
     },
-    "build": [
-      {
-        "run": "build:dist"
-      },
-      {
-        "run": "build:prod"
-      }
-    ],
     "test": {
       "command": "karma start",
       "env": {
