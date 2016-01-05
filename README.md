@@ -2,6 +2,8 @@
 
 # Intro
 
+[![Join the chat at https://gitter.im/benoror/better-npm-run](https://badges.gitter.im/benoror/better-npm-run.svg)](https://gitter.im/benoror/better-npm-run?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Better NPM scripts runner
 
 - Avoid hard-coded commands in package.json
