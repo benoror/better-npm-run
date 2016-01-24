@@ -18,6 +18,7 @@ Better NPM scripts runner
 # Alternatives
 
 - [argv-set-env](https://github.com/kentcdodds/argv-set-env)
+- [cross-env](https://github.com/kentcdodds/cross-env)
 
 # Usage in package.json
 
