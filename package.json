@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "dotenv": "^2.0.0",
-    "endofline": "0.0.3",
     "object-assign": "^4.0.1"
   },
   "betterScripts": {
