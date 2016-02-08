@@ -4,7 +4,7 @@ console.log('running better-npm-run in', process.cwd());
 var join = require('path').join;
 var fullPackagePath = join(process.cwd(), 'package.json');
 var pkg = require(fullPackagePath);
-var exec = require('./lib/exec.js')
+var exec = require('./lib/exec.js');
 
 if (!pkg.scripts) {
 	process.stderr.write('ERROR: No scripts found!');
