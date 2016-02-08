@@ -1,8 +1,10 @@
 [![NPM](https://nodei.co/npm/better-npm-run.png)](https://npmjs.org/package/better-npm-run)
 
-# Intro
-
 [![Join the chat at https://gitter.im/benoror/better-npm-run](https://badges.gitter.im/benoror/better-npm-run.svg)](https://gitter.im/benoror/better-npm-run?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+[![Build Status](https://semaphoreci.com/api/v1/benoror/better-npm-run/branches/master/badge.svg)](https://semaphoreci.com/benoror/better-npm-run)
+
+# Intro
 
 Better NPM scripts runner
 
