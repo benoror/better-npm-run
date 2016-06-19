@@ -14,6 +14,7 @@
   },
   "main": "index.js",
   "bin": {
+    "bnr": "index.js",
     "better-npm-run": "index.js"
   },
   "scripts": {

@@ -80,7 +80,7 @@ PORT=5000
 
 # Shell scripts
 
-Currently, using [bash variables](http://tldp.org/LDP/abs/html/internalvariables.html) (PWD, USER, etc.) is not possible: 
+Currently, using [bash variables](http://tldp.org/LDP/abs/html/internalvariables.html) (PWD, USER, etc.) is not possible:
 
 ``` JSON
   "command": "forever start -l ${PWD}/logs/forever.log -o ${PWD}/logs/out.log -e ${PWD}/logs/errors.log -a index.js",
@@ -97,3 +97,29 @@ forever start -l ${PWD}/logs/forever.log -o ${PWD}/logs/out.log -e ${PWD}/logs/e
 ``` javascript
   "command": "./forever.sh"
 ```
+
+## cli commands
+
+This module expose 2 cli commands:
+- `better-npm-run` and,
+- a shorter one: `bnr` which is an alias to the former.
+
+The shorter one is useful for cases where you have a script that calls several `better-npm-run` scripts. e.g:
+
+using the normal cli name
+
+```javascript
+"scripts": {
+  "dev": "shell-exec 'better-npm-run install-hooks' 'better-npm-run watch-client' 'better-npm-run start-dev' 'better-npm-run start-dev-api' 'better-npm-run start-dev-worker' 'better-npm-run start-dev-socket'",
+}
+```
+
+using the shorter alias
+
+```javascript
+"scripts": {
+  "dev": "shell-exec 'bnr install-hooks' 'bnr watch-client' 'bnr start-dev' 'bnr start-dev-api' 'bnr start-dev-worker' 'bnr start-dev-socket'",
+}
+```
+
+
