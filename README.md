@@ -27,7 +27,7 @@ Better NPM scripts runner
 # Usage in package.json
 
 From this:
-```
+```JSON
 {
   "scripts": {
     "build:dist": "NODE_ENV=development webpack --config $npm_package_webpack --progress --colors",
@@ -37,22 +37,18 @@ From this:
 ```
 
 To this:
-```
+```JSON
 {
   "devDependencies": {
     "better-npm-run": "~0.0.1"
   },
   "scripts": {
     "build:dist": "better-npm-run build:dist",
+    "build:prod": "better-npm-run build:prod",
     "test": "better-npm-run test"
   },
   "betterScripts": {
-    "build:dist": {
-      "command": "webpack --config $npm_package_webpack --progress --colors",
-      "env": {
-        "NODE_ENV": "development"
-      }
-    },
+    "build:dist": "webpack --config $npm_package_webpack --progress --colors",
     "build:prod": {
       "command": "webpack --config $npm_package_webpack --progress --colors",
       "env": {
@@ -69,12 +65,15 @@ To this:
 }
 ```
 
+_The `betterScripts` script definition can either be a string or sub-object with `command` and `env` attributes._
+
 # .env File
 
 If you have an `.env` file in your project root it will be loaded on every command
 
 ```
 NODE_PATH=./:./lib
+NODE_ENV=development
 PORT=5000
 ```
 
@@ -121,5 +120,3 @@ using the shorter alias
   "dev": "shell-exec 'bnr install-hooks' 'bnr watch-client' 'bnr start-dev' 'bnr start-dev-api' 'bnr start-dev-worker' 'bnr start-dev-socket'",
 }
 ```
-
-
