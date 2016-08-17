@@ -11,3 +11,7 @@ if (process.env.FOO !== "bar") {
 if (process.argv[2] !== "--test") {
     throw new Error('it should accept params');
 }
+
+if (process.env.TEST_ENV_SUBSTITUTION !== "TEST_VALUE") {
+    throw new Error('it should substitute in env');
+}
