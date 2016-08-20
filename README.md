@@ -77,6 +77,25 @@ NODE_ENV=development
 PORT=5000
 ```
 
+# Environment variable substitution
+
+```json
+"betterScripts": {
+  "start": {
+    "command": "node start.js ${COPY_OF_NODE_ENV}",
+    "env": {
+      "FOO": "bar",
+      "COPY_OF_NODE_ENV": "${NODE_ENV}"
+    }
+  }
+}
+```
+
+Environment variables will be substituted into:
+
+- the `command` by means of automatic substitution in `child_process.spawn()`.
+- each of the `env` values using string interpolation.
+
 # Shell scripts
 
 Currently, using [bash variables](http://tldp.org/LDP/abs/html/internalvariables.html) (PWD, USER, etc.) is not possible:
