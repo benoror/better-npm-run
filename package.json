@@ -19,10 +19,11 @@
   },
   "scripts": {
     "test:env": "node index.js test:env",
+    "test:env-extend": "TEST_ENV2=envvar node index.js test:env-extend",
     "test:params": "node index.js test:params --test",
     "test:command:object": "node index.js test:command:object",
     "test:command:string": "node index.js test:command:string",
-    "test": "npm run test:env && npm run test:params && npm run test:command:object && npm run test:command:string"
+    "test": "npm run test:env && npm run test:env-extend && npm run test:params && npm run test:command:object && npm run test:command:string"
   },
   "dependencies": {
     "dotenv": "^2.0.0",
@@ -39,6 +40,13 @@
     "test:env": {
       "command": "node ./test/env.js",
       "env": {
+        "FOO": "bar"
+      }
+    },
+    "test:env-extend": {
+      "command": "node ./test/env-extend.js",
+      "env": {
+        "TEST_ENV": "overridden",
         "FOO": "bar"
       }
     }

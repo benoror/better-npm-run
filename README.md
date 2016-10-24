@@ -77,6 +77,13 @@ NODE_ENV=development
 PORT=5000
 ```
 
+Environment variables will be merged in the following order:
+* `package.json` options
+* `.env` file content
+* parent `process.env` values
+
+Whoever comes last, will set the actual value.
+
 # Shell scripts
 
 Currently, using [bash variables](http://tldp.org/LDP/abs/html/internalvariables.html) (PWD, USER, etc.) is not possible:
