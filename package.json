@@ -44,6 +44,7 @@
       }
     },
     "test:env-extend": {
+      "command": "node ./test/env-extend.js",
       "defaultEnv": {
         "TEST_ENV": "overridden"
       },
@@ -52,7 +53,7 @@
       }
     },
     "test:env-extend-no-override": {
-      "command": "node ./test/env-extend.js",
+      "command": "node ./test/env-extend-no-override.js",
       "defaultEnv": {
         "TEST_ENV": "overridden"
       },
