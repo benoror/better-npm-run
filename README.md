@@ -65,11 +65,11 @@ To this:
 }
 ```
 
-_The `betterScripts` script definition can either be a string or sub-object with `command` and `env` attributes._
+_The `betterScripts` script definition can either be a string or sub-object with `command` and `env` attributes. Values defined in the `env` block will override previously set environment variables._
 
 # .env File
 
-If you have an `.env` file in your project root it will be loaded on every command
+If you have an `.env` file in your project root it will be loaded on every command.
 
 ```
 NODE_PATH=./:./lib
@@ -77,12 +77,7 @@ NODE_ENV=development
 PORT=5000
 ```
 
-Environment variables will be merged in the following order:
-* `package.json` options
-* `.env` file content
-* parent `process.env` values
-
-Whoever comes last, will set the actual value.
+_Environment variables defined in the `betterScripts` script definition will take precedence over `.env` values._
 
 # Shell scripts
 
