@@ -1,0 +1,7 @@
+if (process.env.TEST_ENV !== "not_overriden") {
+  throw new Error(".env file variable is not overridden");
+}
+
+if(process.env.TEST_ENV2 !== "envvar") {
+  throw new Error("environment variable is overridden");
+}
