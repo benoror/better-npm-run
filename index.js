@@ -39,7 +39,3 @@ exec(pkg.betterScripts[scriptName], isSilent, function (error, stdout, stderr) {
   }
 });
 
-//
-// Silent mode feature added. Closing #60
-//
-// Running with -s or --silent flag will silence not only npm noise but also info messages of better-npm-run itself.
