@@ -122,3 +122,9 @@ using the shorter alias
   "dev": "shell-exec 'bnr install-hooks' 'bnr watch-client' 'bnr start-dev' 'bnr start-dev-api' 'bnr start-dev-worker' 'bnr start-dev-socket'",
 }
 ```
+
+Also for silence output, you can use `-s` or verbose `--silence` flags
+
+```
+bnr watch-client -s
+```

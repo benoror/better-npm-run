@@ -23,6 +23,7 @@
     "test:params": "node index.js test:params --test",
     "test:command:object": "node index.js test:command:object",
     "test:command:string": "node index.js test:command:string",
+    "test:silent": "node index.js test:command:object -s && node index.js test:command:object --silent",
     "test": "npm run test:env && npm run test:env-extend && npm run test:params && npm run test:command:object && npm run test:command:string"
   },
   "dependencies": {

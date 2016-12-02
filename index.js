@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 
-console.log('running better-npm-run in', process.cwd());
+var scriptName = process.argv[2];
+
+var isSilent = process.argv.indexOf('-s') > -1 || process.argv.indexOf('--silent') > -1;
+
+isSilent || console.log('running better-npm-run in', process.cwd());
 var join = require('path').join;
 var fullPackagePath = join(process.cwd(), 'package.json');
 var pkg = require(fullPackagePath);
@@ -14,21 +18,28 @@ if (!pkg.betterScripts) {
   process.stderr.write('ERROR: No betterScripts found!');
   process.exit(1);
 }
-if (!process.argv[2]) {
+if (!scriptName) {
   process.stderr.write('ERROR: No script name provided!');
   process.exit(1);
 }
-if (!pkg.betterScripts[process.argv[2]]) {
-  process.stderr.write('ERROR: No betterScript with name "'+process.argv[2]+'" was found!');
+if (!pkg.betterScripts[scriptName]) {
+  process.stderr.write('ERROR: No betterScript with name "'+scriptName+'" was found!');
   process.exit(1);
 }
 
-console.log('Executing script: ' + process.argv[2] + '\n');
 
-exec(pkg.betterScripts[process.argv[2]], function (error, stdout, stderr) {
+isSilent || console.log('Executing script: ' + scriptName + '\n');
+
+
+exec(pkg.betterScripts[scriptName], isSilent, function (error, stdout, stderr) {
   process.stderr.write(stderr);
   process.stdout.write(stdout);
   if(error !== null) {
     console.log('exec error: '+error);
   }
 });
+
+//
+// Silent mode feature added. Closing #60
+//
+// Running with -s or --silent flag will silence not only npm noise but also info messages of better-npm-run itself.
