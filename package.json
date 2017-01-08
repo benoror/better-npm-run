@@ -1,7 +1,7 @@
 {
   "name": "better-npm-run",
   "description": "Better NPM scripts runner",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "license": "MIT",
   "author": "Benjamin Orozco <benoror@gmail.com>",
   "contributors": [
@@ -24,7 +24,7 @@
     "test:command:object": "node index.js test:command:object",
     "test:command:string": "node index.js test:command:string",
     "test:silent": "node index.js test:command:object -s && node index.js test:command:object --silent",
-    "test": "npm run test:env && npm run test:env-extend && npm run test:params && npm run test:command:object && npm run test:command:string"
+    "test": "npm run test:env && npm run test:env-extend && npm run test:params && npm run test:command:object && npm run test:command:string && npm run test:silent"
   },
   "dependencies": {
     "dotenv": "^2.0.0",
