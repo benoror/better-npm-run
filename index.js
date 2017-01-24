@@ -1,10 +1,14 @@
 #!/usr/bin/env node
+var program = require('commander'),
+    scriptName = process.argv[2];
 
-var scriptName = process.argv[2];
+program
+  .option('-s, --silent', 'silent')
+  .parse(process.argv);
 
-var isSilent = process.argv.indexOf('-s') > -1 || process.argv.indexOf('--silent') > -1;
-
-isSilent || console.log('running better-npm-run in', process.cwd());
+if (!program.silent) {
+  console.log('running better-npm-run in', process.cwd());
+}
 var join = require('path').join;
 var fullPackagePath = join(process.cwd(), 'package.json');
 var pkg = require(fullPackagePath);
@@ -23,15 +27,15 @@ if (!scriptName) {
   process.exit(1);
 }
 if (!pkg.betterScripts[scriptName]) {
-  process.stderr.write('ERROR: No betterScript with name "'+scriptName+'" was found!');
+  process.stderr.write('ERROR: No betterScript with name "' + scriptName + '" was found!');
   process.exit(1);
 }
 
+if(!program.silent) {
+  console.log('Executing script: ' + scriptName + '\n');
+}
 
-isSilent || console.log('Executing script: ' + scriptName + '\n');
-
-
-exec(pkg.betterScripts[scriptName], isSilent, function (error, stdout, stderr) {
+exec(pkg.betterScripts[scriptName], program, function (error, stdout, stderr) {
   process.stderr.write(stderr);
   process.stdout.write(stdout);
   if(error !== null) {

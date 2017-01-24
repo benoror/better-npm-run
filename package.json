@@ -27,6 +27,7 @@
     "test": "npm run test:env && npm run test:env-extend && npm run test:params && npm run test:command:object && npm run test:command:string && npm run test:silent"
   },
   "dependencies": {
+    "commander": "^2.9.0",
     "dotenv": "^2.0.0",
     "object-assign": "^4.0.1"
   },
