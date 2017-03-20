@@ -3,6 +3,8 @@ var program = require('commander'),
     scriptName = process.argv[2];
 
 program
+  .option('-e, --encoding [type]', 'Specify the encoding of dotenv file')
+  .option('-p, --path [type]', 'Specify a custom path of dotenv file')
   .option('-s, --silent', 'silent')
   .parse(process.argv);
 
@@ -42,4 +44,3 @@ exec(pkg.betterScripts[scriptName], program, function (error, stdout, stderr) {
     console.log('exec error: '+error);
   }
 });
-
