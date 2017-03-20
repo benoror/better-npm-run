@@ -129,13 +129,13 @@ And for silence output, you can use `-s` or verbose `--silence` flags
 bnr watch-client -s
 ```
 
-And you can use `-p` or verbose `--path` specify a custom path of dotenv file
+And you can use `-p` or verbose `--path` to specify a custom path of dotenv file
 
 ```
 bnr start-dev --path=/custom/path/to/your/env/vars
 ```
 
-Also use `-e` or verbose `--encoding` specify the encoding of dotenv file
+Also use `-e` or verbose `--encoding` to specify the encoding of dotenv file
 
 ```
 bnr start-dev --encoding=base64
