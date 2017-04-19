@@ -65,11 +65,11 @@ To this:
 }
 ```
 
-_The `betterScripts` script definition can either be a string or sub-object with `command` and `env` attributes. Values defined in the `env` block will override previously set environment variables._
+_The `betterScripts` script definition can either be a string or sub-object with `command`, `env`, and `envpath` attributes. Values defined in the `env` block will override previously set environment variables._
 
 # .env File
 
-If you have an `.env` file in your project root it will be loaded on every command.
+If you have an `.env` file in your project root it will be loaded on every command. Path to the `.env` file can be further specified with the CLI argument.
 
 ```
 NODE_PATH=./:./lib
@@ -77,7 +77,21 @@ NODE_ENV=development
 PORT=5000
 ```
 
-_Environment variables defined in the `betterScripts` script definition will take precedence over `.env` values._
+_Path to the `.env` file specified via `envpath` attribute in the `betterScripts` script definition will take precedence over default path or path passed with the CLI argument._
+
+```
+"betterScripts": {
+    "test": {
+      "command": "karma start",
+      "envpath": ".env.test",
+      "env": {
+        "NODE_ENV": "test"
+      }
+    }
+  }
+```
+
+_Environment variables defined via `env` attribute in the `betterScripts` script definition will take precedence over `.env` values._
 
 # Shell scripts
 
