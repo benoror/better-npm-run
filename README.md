@@ -126,19 +126,19 @@ using the shorter alias
 And for silence output, you can use `-s` or verbose `--silence` flags
 
 ```
-bnr watch-client -s
+bnr -s watch-client
 ```
 
 And you can use `-p` or verbose `--path` to specify a custom path of dotenv file
 
 ```
-bnr start-dev --path=/custom/path/to/your/env/vars
+bnr --path=/custom/path/to/your/env/vars start-dev
 ```
 
 Also use `-e` or verbose `--encoding` to specify the encoding of dotenv file
 
 ```
-bnr start-dev --encoding=base64
+bnr --encoding=base64 start-dev
 ```
 
 See [envdot docs](https://github.com/motdotla/dotenv) for more infomation
