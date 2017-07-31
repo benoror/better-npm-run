@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-var program = require('commander'),
-    scriptName = process.argv[2];
+var program = require('commander');
 
 program
   .option('-e, --encoding [type]', 'Specify the encoding of dotenv file')
   .option('-p, --path [type]', 'Specify a custom path of dotenv file')
   .option('-s, --silent', 'silent')
   .parse(process.argv);
+var scriptName = program.args[0];
 
 if (!program.silent) {
   console.log('running better-npm-run in', process.cwd());
