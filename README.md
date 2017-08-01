@@ -67,6 +67,22 @@ To this:
 
 _The `betterScripts` script definition can either be a string or sub-object with `command` and `env` attributes. Values defined in the `env` block will override previously set environment variables._
 
+Note that depending on the OS and terminal you're using, dots, spaces or other special characters in the command path may be treated as separators and the command will be parsed wrong.
+
+```JSON
+{
+  "serve:dist": "./node_modules/.bin/webpack-dev-server --hot --inline --config webpack/development.js"
+}
+```
+
+To prevent this you need to explicitly wrap the command path with double quotes:
+
+```JSON
+{
+  "serve:dist": "\"./node_modules/.bin/webpack-dev-server\" --hot --inline --config webpack/development.js"
+}
+```
+
 # .env File
 
 If you have an `.env` file in your project root it will be loaded on every command.
