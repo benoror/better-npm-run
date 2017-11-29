@@ -6,7 +6,7 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-# Intro
+![8dfc4b1170a25e07c254c99f6f549caf](https://user-images.githubusercontent.com/119117/33388438-9c08ff52-d4f5-11e7-87dc-cdcb085a907f.png)
 
 Better NPM scripts runner
 
