@@ -38,9 +38,13 @@ if(!program.silent) {
 }
 
 var betterCommand = pkg.betterScripts[scriptName];
-if(process.env.NODE_DEBUG_OPTION == undefined){
-  betterCommand = betterCommand.replace('%NODE_DEBUG_OPTION%','')
-  betterCommand = betterCommand.replace('$NODE_DEBUG_OPTION','')
+if(process.env.NODE_DEBUG_OPTION === undefined){
+  if(typeof betterCommand === String){
+    betterCommand = betterCommand.replace('%NODE_DEBUG_OPTION%','').replace('$NODE_DEBUG_OPTION','');
+  }
+  else if(betterCommand.command && typeof betterCommand.command === String){
+    betterCommand.command = betterCommand.command.replace('%NODE_DEBUG_OPTION%','').replace('$NODE_DEBUG_OPTION','');
+  }
 }
 
 exec(betterCommand, program, function (error, stdout, stderr) {
