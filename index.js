@@ -37,7 +37,17 @@ if(!program.silent) {
   console.log('Executing script: ' + scriptName + '\n');
 }
 
-exec(pkg.betterScripts[scriptName], program, function (error, stdout, stderr) {
+var betterCommand = pkg.betterScripts[scriptName];
+if(process.env.NODE_DEBUG_OPTION === undefined){
+  if(typeof betterCommand === 'string'){
+    betterCommand = betterCommand.replace('%NODE_DEBUG_OPTION%','').replace('$NODE_DEBUG_OPTION','');
+  }
+  else if(betterCommand.command && typeof betterCommand.command === 'string'){
+    betterCommand.command = betterCommand.command.replace('%NODE_DEBUG_OPTION%','').replace('$NODE_DEBUG_OPTION','');
+  }
+}
+
+exec(betterCommand, program, function (error, stdout, stderr) {
   process.stderr.write(stderr);
   process.stdout.write(stdout);
   if(error !== null) {
