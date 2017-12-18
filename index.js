@@ -39,10 +39,10 @@ if(!program.silent) {
 
 var betterCommand = pkg.betterScripts[scriptName];
 if(process.env.NODE_DEBUG_OPTION === undefined){
-  if(typeof betterCommand === String){
+  if(typeof betterCommand === 'string'){
     betterCommand = betterCommand.replace('%NODE_DEBUG_OPTION%','').replace('$NODE_DEBUG_OPTION','');
   }
-  else if(betterCommand.command && typeof betterCommand.command === String){
+  else if(betterCommand.command && typeof betterCommand.command === 'string'){
     betterCommand.command = betterCommand.command.replace('%NODE_DEBUG_OPTION%','').replace('$NODE_DEBUG_OPTION','');
   }
 }
