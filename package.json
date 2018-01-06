@@ -23,6 +23,8 @@
     "test:params": "node index.js --silent test:params --test",
     "test:command:object": "node index.js test:command:object",
     "test:command:string": "node index.js test:command:string",
+    "test:multiline": "node index.js test:multiline",
+    "test:multiline:env": "node index.js test:multiline:env",
     "test:silent": "node index.js test:command:object -s && node index.js test:command:object --silent",
     "test": "npm run test:env && npm run test:env-extend && npm run test:params && npm run test:command:object && npm run test:command:string && npm run test:silent"
   },
@@ -49,6 +51,15 @@
       "command": "node ./test/env-extend.js",
       "env": {
         "TEST_ENV": "overridden",
+        "FOO": "bar"
+      }
+    },
+    "test:multiline" : ["node", 
+                  "./test/command.js"],
+    "test:multiline:env" : {
+      "command": ["node", 
+                  "./test/command.js"],
+      "env": {
         "FOO": "bar"
       }
     }
