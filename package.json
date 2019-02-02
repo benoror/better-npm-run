@@ -42,7 +42,8 @@
     "test:env": {
       "command": "node ./test/env.js",
       "env": {
-        "FOO": "bar"
+        "FOO": "bar",
+        "TEST_ENV_SUBSTITUTION": "${TEST_ENV}"
       }
     },
     "test:env-extend": {
