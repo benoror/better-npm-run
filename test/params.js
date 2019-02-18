@@ -4,3 +4,6 @@ if (process.argv[2] === "--silent") {
 if (process.argv[2] !== "--test") {
   throw new Error('it should accept params');
 }
+if (process.argv[3] !== 'param in quotes') {
+  throw new Error('it should accept quoted params');
+}

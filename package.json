@@ -20,7 +20,7 @@
   "scripts": {
     "test:env": "node index.js test:env",
     "test:env-extend": "TEST_ENV2=envvar node index.js test:env-extend",
-    "test:params": "node index.js --silent test:params --test",
+    "test:params": "node index.js --silent test:params --test 'param in quotes'",
     "test:command:object": "node index.js test:command:object",
     "test:command:string": "node index.js test:command:string",
     "test:silent": "node index.js test:command:object -s && node index.js test:command:object --silent",
