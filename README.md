@@ -1,3 +1,9 @@
+# ⚠️ ‼️ DEPRECATION WARNING ‼️ ⚠️
+
+This solution is outdated. Check out [kentcdodds/cross-env](https://github.com/kentcdodds/cross-env) which might better suit your needs!
+
+---
+
 [![NPM](https://nodei.co/npm/better-npm-run.png)](https://npmjs.org/package/better-npm-run)
 
 [![Join the chat at https://gitter.im/benoror/better-npm-run](https://badges.gitter.im/benoror/better-npm-run.svg)](https://gitter.im/benoror/better-npm-run?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
