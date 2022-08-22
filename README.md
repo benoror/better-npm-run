@@ -27,6 +27,7 @@ Better NPM scripts runner
 
 # Alternatives
 
+- [better-scripts](https://github.com/iamyoki/better-scripts). [(Official Docs).](https://better-scripts.vercel.app/)
 - [argv-set-env](https://github.com/kentcdodds/argv-set-env)
 - [cross-env](https://github.com/kentcdodds/cross-env)
 
